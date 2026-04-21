@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
+  },
+  "files": ["./src/index.ts"],
+  "include": ["./src/**/*.ts", "./src/backends.ts"],
+  "exclude": ["./src/shapes/S3QuadStore.ts", "./src/shapes/S3FrontendStore.ts", "./src/shapes/S3FrontendStoreProvider.ts"]
+}

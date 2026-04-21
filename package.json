@@ -1,0 +1,77 @@
+{
+  "name": "@_linked/s3",
+  "displayName": "s3",
+  "description": "A general purpose Simple Storage Service (S3) package to be extended or used as is",
+  "author": {
+    "name": "Valentine Wilson",
+    "email": "valentine@semantu.com",
+    "url": "https://vw.codes"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "1.0.1",
+  "lincd": true,
+  "main": "lib/cjs/index.js",
+  "types": "dist/s3.d.ts",
+  "license": "ISC",
+  "scripts": {
+    "start": "npm exec lincd dev",
+    "build": "yarn lincd build",
+    "prepublishOnly": "yarn lincd build production",
+    "postpublish": "npm exec lincd register"
+  },
+  "keywords": [
+    "lincd",
+    "linked data",
+    "interoperable",
+    "semantic web",
+    "web3",
+    "s3",
+    "simple storage service",
+    "cloud storage",
+    "aws"
+  ],
+  "dependencies": {
+    "@_linked/core": "^2.2.1",
+    "@_linked/server": "~1.0",
+    "@_linked/server-utils": "~1.0",
+    "@aws-sdk/client-s3": "^3.159.0",
+    "@aws-sdk/credential-providers": "^3.159.0",
+    "cron": "^3.1.7",
+    "mime": "2.6.0"
+  },
+  "devDependencies": {
+    "@types/mime": "^3.0.4",
+    "lincd-cli": "^1.2",
+    "tsconfig-to-dual-package": "^1.2.0",
+    "typescript": "^5.7.3",
+    "typescript-plugin-css-modules": "^5.1.0"
+  },
+  "module": "lib/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./lib/esm/index.d.ts",
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js"
+    },
+    "./*.js": {
+      "types": "./lib/esm/*.d.ts",
+      "import": "./lib/esm/*.js",
+      "require": "./lib/cjs/*.js"
+    },
+    "./*": {
+      "types": "./lib/esm/*.d.ts",
+      "import": "./lib/esm/*.js",
+      "require": "./lib/cjs/*.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "lib/esm/*"
+      ]
+    }
+  }
+}
