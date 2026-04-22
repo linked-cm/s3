@@ -12,15 +12,15 @@
     "url": ""
   },
   "version": "1.0.1",
-  "lincd": true,
+  "linkedPackage": true,
   "main": "lib/cjs/index.js",
   "types": "dist/s3.d.ts",
   "license": "ISC",
   "scripts": {
-    "start": "npm exec lincd dev",
-    "build": "yarn lincd build",
-    "prepublishOnly": "yarn lincd build production",
-    "postpublish": "npm exec lincd register"
+    "start": "npm exec linked dev",
+    "build": "yarn linked build",
+    "prepublishOnly": "yarn linked build production",
+    "postpublish": "npm exec linked register"
   },
   "keywords": [
     "lincd",
@@ -43,8 +43,8 @@
     "mime": "2.6.0"
   },
   "devDependencies": {
+    "@_linked/cli": "^1.2",
     "@types/mime": "^3.0.4",
-    "lincd-cli": "^1.2",
     "tsconfig-to-dual-package": "^1.2.0",
     "typescript": "^5.7.3",
     "typescript-plugin-css-modules": "^5.1.0"
