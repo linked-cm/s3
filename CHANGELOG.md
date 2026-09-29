@@ -1,5 +1,11 @@
 # @\_linked/s3
 
+## 1.5.1
+
+### Patch Changes
+
+- [#31](https://github.com/linked-fw/s3/pull/31) [`e4c009c`](https://github.com/linked-fw/s3/commit/e4c009cf27eb807e1b2a542b77cb0f62dd6d73fe) Thanks [@flyon](https://github.com/flyon)! - Sourcemaps now embed their TypeScript source, so consumers no longer see 'points to missing source files' warnings.
+
 ## 1.5.0
 
 ### Minor Changes
