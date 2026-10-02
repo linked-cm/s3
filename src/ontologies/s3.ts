@@ -7,7 +7,17 @@ export var loadData = () => {
   );
 };
 
-export var ns = createNameSpace('http://lincd.org/ont/s3/');
+/**
+ * The namespace of this ontology.
+ *
+ * First-party ontologies live on linked.cm: `https://linked.cm/ont/{ontologySlug}/`, and a
+ * package's own ontology takes the package's publicSlug (`@_linked/s3` → `s3`), the same slug its
+ * shapes would use under `https://linked.cm/shape/s3/`.
+ *
+ * Until this release it was `http://lincd.org/ont/s3/`. None of these terms types stored data or
+ * appears in a shape (`S3Bucket` and `S3FileStore` are plain classes), so nothing needs migrating.
+ */
+export var ns = createNameSpace('https://linked.cm/ont/s3/');
 
 export var _self = ns('');
 
