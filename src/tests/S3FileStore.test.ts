@@ -34,6 +34,35 @@ const putOptions = (bucket: MockBucket) =>
   bucket.putObject.mock.calls[0][2] as Record<string, any>;
 
 describe('S3FileStore.saveFile', () => {
+  it.each([
+    ['svg', 'image/svg+xml'],
+    ['png', 'image/png'],
+    ['jpg', 'image/jpeg'],
+    ['webp', 'image/webp'],
+    ['pdf', 'application/pdf'],
+    ['json', 'application/json'],
+    ['js', 'application/javascript'],
+    ['mjs', 'application/javascript'],
+    ['css', 'text/css'],
+    ['html', 'text/html'],
+    ['woff2', 'font/woff2'],
+    [
+      'pptx',
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+    ],
+    [
+      'docx',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    ],
+  ])('derives the content type of a .%s upload as %s', async (ext, type) => {
+    const [store, bucket] = createStore();
+
+    await store.saveFile(`uploads/File.${ext.toUpperCase()}`, 'bytes');
+
+    expect(putOptions(bucket).ContentType).toBe(type);
+  });
+
+
   it('sends ContentType, CacheControl and Metadata from SaveFileOptions', async () => {
     const [store, bucket] = createStore();
 

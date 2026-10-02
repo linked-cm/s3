@@ -4,7 +4,9 @@ import {
   SaveFileOptions,
   normalizeSaveFileOptions,
 } from '@_linked/core/interfaces/IFileStore';
-import mime from 'mime';
+import { Mime } from 'mime';
+import otherTypes from 'mime/types/other.js';
+import standardTypes from 'mime/types/standard.js';
 import path from 'path';
 import {
   S3Bucket,
@@ -24,6 +26,18 @@ export interface S3FileStoreConfig {
   prefix?: string;
   clientConfig?: S3ClientConfigInput;
 }
+
+/**
+ * Content-type lookup for uploads. mime's default instance is frozen, so this
+ * builds its own from the same tables and keeps `.js`/`.mjs` on
+ * `application/javascript` - the type this store has always sent. mime 4 follows
+ * RFC 9239 and returns `text/javascript`; browsers accept both, but objects
+ * already in buckets carry the old value and uploads should stay consistent.
+ */
+const mime = new Mime(standardTypes, otherTypes).define(
+  { 'application/javascript': ['js', 'mjs'] },
+  true
+);
 
 const trimSlashes = (value = '') => value.replace(/^\/+|\/+$/g, '');
 const trimTrailingSlash = (value = '') => value.replace(/\/+$/g, '');
