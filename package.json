@@ -50,7 +50,7 @@
     "@_linked/cli": "^1.19.0",
     "@changesets/changelog-github": "^1.0.0",
     "@changesets/cli": "^3.0.0",
-    "@jest/globals": "^29.7.0",
+    "@jest/globals": "^30.0.0",
     "@types/jest": "^30.0.0",
     "@types/mime": "^3.0.4",
     "@types/node": "^24.0.0",
