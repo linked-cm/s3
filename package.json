@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/linked-fw/s3.git"
   },
-  "version": "1.5.1",
+  "version": "1.5.2",
   "packageManager": "npm@11.20.0",
   "linkedPackage": true,
   "type": "module",
@@ -43,14 +43,13 @@
     "@_linked/server-utils": "^1.0",
     "@aws-sdk/client-s3": "^3.159.0",
     "@aws-sdk/credential-providers": "^3.159.0",
-    "cron": "^3.1.7",
     "mime": "4.1.0"
   },
   "devDependencies": {
     "@_linked/cli": "^1.19.0",
     "@changesets/changelog-github": "^1.0.0",
     "@changesets/cli": "^3.0.0",
-    "@jest/globals": "^29.7.0",
+    "@jest/globals": "^30.0.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
     "copyfiles": "^2.4.1",
