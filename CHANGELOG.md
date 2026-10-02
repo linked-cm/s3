@@ -1,5 +1,13 @@
 # @\_linked/s3
 
+## 1.6.0
+
+### Minor Changes
+
+- [#47](https://github.com/linked-fw/s3/pull/47) [`b58d820`](https://github.com/linked-fw/s3/commit/b58d820839545625c568d514fd9e557bbe6c1e80) Thanks [@flyon](https://github.com/flyon)! - The s3 ontology moves from `http://lincd.org/ont/s3/` to `https://linked.cm/ont/s3/`, the first-party scheme every public package uses (`https://linked.cm/ont/{publicSlug}/`).
+  
+  No data migration is needed: none of its terms (`s3.Bucket`, `s3.FileStore`, `s3.bucket`, …) types stored data or appears in a shape, since `S3Bucket` and `S3FileStore` are plain classes. The prefix key (`s3`) and the `ontologies/s3` module are unchanged; code that hard-codes `http://lincd.org/ont/s3/` must be updated.
+
 ## 1.5.3
 
 ### Patch Changes
