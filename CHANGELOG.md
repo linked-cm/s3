@@ -1,5 +1,11 @@
 # @\_linked/s3
 
+## 1.5.2
+
+### Patch Changes
+
+- [#40](https://github.com/linked-fw/s3/pull/40) [`a5dd132`](https://github.com/linked-fw/s3/commit/a5dd132ec716ec8b4925380422a52b7aad1dc497) Thanks [@renovate](https://github.com/apps/renovate)! - Drop the unused `cron` dependency. Nothing in this package imports it, so installs get lighter and behaviour is unchanged.
+
 ## 1.5.1
 
 ### Patch Changes
