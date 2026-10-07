@@ -167,7 +167,7 @@ against any URL, and never rejects — a network failure comes back as
 
 Registering stores by purpose (`LinkedFileStorage.setStore`, `getStore`,
 `registerPurpose`) is core's concern, not this package's — see
-[`@_linked/core`](https://github.com/linked-cm/core) and its
+[`@_linked/core`](https://github.com/linked-fw/core) and its
 `utils/LinkedFileStorage` / `interfaces/IFileStore`.
 
 ## Environment Variables
