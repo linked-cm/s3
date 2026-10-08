@@ -1,5 +1,11 @@
 # @\_linked/s3
 
+## 1.6.1
+
+### Patch Changes
+
+- [#54](https://github.com/linked-fw/s3/pull/54) [`c5349d7`](https://github.com/linked-fw/s3/commit/c5349d7bbe3f6f473f8d5f98b205f2502e8edd55) Thanks [@flyon](https://github.com/flyon)! - Publish only the files consumers need; the tarball no longer includes `.changeset/`, `.gitattributes`, `.github/`, `jest.config.cjs`, `renovate.json` or tsconfig files.
+
 ## 1.6.0
 
 ### Minor Changes
