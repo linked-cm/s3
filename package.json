@@ -12,7 +12,7 @@
     "url": "git+https://github.com/linked-fw/s3.git"
   },
   "version": "1.6.2",
-  "packageManager": "npm@12.1.0",
+  "packageManager": "npm@12.2.0",
   "linkedPackage": true,
   "type": "module",
   "main": "lib/esm/index.js",
