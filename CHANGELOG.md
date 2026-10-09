@@ -1,5 +1,11 @@
 # @\_linked/s3
 
+## 1.6.2
+
+### Patch Changes
+
+- [#57](https://github.com/linked-fw/s3/pull/57) [`a4bed35`](https://github.com/linked-fw/s3/commit/a4bed35131d127d135b30e3ebebb4c626c0a92ac) Thanks [@flyon](https://github.com/flyon)! - Build with `linked build` instead of a hand-rolled `tsc` + `copyfiles` script, and drop the `rimraf`/`copyfiles` devDependencies. The published `lib/` output is unchanged.
+
 ## 1.6.1
 
 ### Patch Changes
